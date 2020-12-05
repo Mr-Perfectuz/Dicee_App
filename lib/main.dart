@@ -15,7 +15,12 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  @override
+  _DiecePageState createState() => _DiecePageState();
+}
+
+class _DiecePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     var LeftButtonClicked = 3;
