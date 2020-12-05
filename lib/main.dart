@@ -21,28 +21,38 @@ class DicePage extends StatefulWidget {
 }
 
 class _DiecePageState extends State<DicePage> {
+  var LeftButtonClicked = 1;
+  var RightButtonClicked = 1;
+
   @override
   Widget build(BuildContext context) {
-    var LeftButtonClicked = 3;
-    var RightButtonClicked = 6;
-
     return Center(
       child: Row(
         children: <Widget>[
           Expanded(
             child: FlatButton(
               onPressed: () {
-                print('Lest button pressed');
+                setState(
+                  () {
+                    LeftButtonClicked = 2;
+                    print('Left button pressed');
+                  },
+                );
               },
-              child: Image.asset('images/dice$RightButtonClicked.png'),
+              child: Image.asset('images/dice$LeftButtonClicked.png'),
             ),
           ),
           Expanded(
             child: FlatButton(
               onPressed: () {
-                print('Lest button pressed');
+                setState(
+                  () {
+                    RightButtonClicked = 5;
+                    print('Right button pressed');
+                  },
+                );
               },
-              child: Image.asset('images/dice$LeftButtonClicked.png'),
+              child: Image.asset('images/dice$RightButtonClicked.png'),
             ),
           ),
         ],
