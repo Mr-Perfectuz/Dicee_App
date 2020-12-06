@@ -25,4 +25,4 @@ We’re going to make a Las Vegas dice app. You can make the die roll at the pre
 - Code and use gesture controls.
 
 
-![(images/Screenshot.png)]
+![](images/Screenshot.png)
